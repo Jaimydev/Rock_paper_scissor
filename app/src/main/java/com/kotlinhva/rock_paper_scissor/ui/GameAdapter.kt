@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kotlinhva.rock_paper_scissor.R
 import com.kotlinhva.rock_paper_scissor.model.Game
 import kotlinx.android.synthetic.main.item_game.view.*
+import java.text.DateFormat
 
 
 class GameAdapter(private val Games: List<Game>) : RecyclerView.Adapter<GameAdapter.ViewHolder>() {
@@ -24,7 +25,7 @@ class GameAdapter(private val Games: List<Game>) : RecyclerView.Adapter<GameAdap
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(game: Game) {
             itemView.tvWinner.text = "${game.winner}"
-            itemView.tvDate.text = game.date.toString()
+            itemView.tvDate.text = DateFormat.getDateTimeInstance().format(game.date)
         }
     }
 }

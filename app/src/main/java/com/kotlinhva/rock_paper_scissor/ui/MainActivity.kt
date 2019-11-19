@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun doGame(play: Play) {
         var game = Game(play);
+        game.PlayGame()
         addGame(game)
         updateUI(game)
 

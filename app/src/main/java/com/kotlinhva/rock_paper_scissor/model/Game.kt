@@ -20,19 +20,16 @@ data class Game(
 
     var date: Date? = null,
     var winner: GameResult? = null,
-    var computer: Play?= null
+    var computer: Play? = null
 
-) : Parcelable
-{
-    // initializer block
-    init {
-        if(playerPlay == null)
+) : Parcelable {
+    fun PlayGame() {
+        if (playerPlay == null)
             throw KotlinNullPointerException()
 
         getComputerPlay()
         date = Date()
         setWinner()
-
     }
 
     private fun getComputerPlay() {
