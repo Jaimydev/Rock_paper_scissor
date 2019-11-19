@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
+    tools:context=".ui.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -44,12 +44,13 @@
 
     <TextView
         android:id="@+id/tvResult"
-        android:layout_width="153dp"
-        android:layout_height="52dp"
+        android:layout_width="243dp"
+        android:layout_height="44dp"
         android:layout_marginStart="122dp"
         android:layout_marginTop="149dp"
         android:layout_marginEnd="136dp"
         android:layout_marginBottom="9dp"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/ivPlayer"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,10 +68,10 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.629"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPlayer"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.968" />
 
     <TextView
         android:id="@+id/tvPlayer"
@@ -110,6 +111,7 @@
         android:layout_marginEnd="109dp"
         android:layout_marginBottom="105dp"
         android:text="@string/welcome"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tvResult"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,17 +120,20 @@
 
     <TextView
         android:id="@+id/tv"
-        android:layout_width="342dp"
-        android:layout_height="33dp"
+        android:layout_width="351dp"
+        android:layout_height="36dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="76dp"
         android:layout_marginBottom="83dp"
         android:text="@string/intro"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/tvResult"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        app:layout_constraintVertical_bias="0.125" />
 
     <TextView
         android:id="@+id/tvStatisticsIntro"
@@ -139,6 +144,7 @@
         android:layout_marginEnd="81dp"
         android:layout_marginBottom="43dp"
         android:text="@string/statisticsIntro"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/tvResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
