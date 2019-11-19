@@ -6,7 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="#00BCD4"
+        app:srcCompat="@android:drawable/ic_menu_recent_history"
+        android:tint="@android:color/white" />
+
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -22,50 +33,36 @@
 
     <include layout="@layout/content_main" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
+    <ImageView
+        android:id="@+id/rock"
+        android:layout_width="114dp"
+        android:layout_height="110dp"
+        android:background="#00BCD4"
+        android:layout_gravity="bottom|end"
+        android:contentDescription="@string/rock"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/rock" />
 
-        <ImageView
-            android:id="@+id/rock"
-            android:layout_width="114dp"
-            android:layout_height="110dp"
-            android:background="#00BCD4"
-            android:contentDescription="@string/rock"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/paper"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.94"
-            app:srcCompat="@drawable/rock" />
+    <ImageView
+        android:id="@+id/scissor"
+        android:layout_width="114dp"
+        android:layout_height="110dp"
+        android:background="#00BCD4"
+        android:layout_gravity="bottom|start"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/scissor"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/scissors" />
 
-        <ImageView
-            android:id="@+id/paper"
-            android:layout_width="114dp"
-            android:layout_height="110dp"
-            android:background="#00BCD4"
-            android:contentDescription="@string/paper"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/scissor"
-            app:layout_constraintStart_toEndOf="@+id/rock"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.94"
-            app:srcCompat="@drawable/paper" />
-
-        <ImageView
-            android:id="@+id/scissor"
-            android:layout_width="114dp"
-            android:layout_height="110dp"
-            android:background="#00BCD4"
-            android:contentDescription="@string/scissor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/paper"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.94"
-            app:srcCompat="@drawable/scissors" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/paper"
+        android:layout_width="114dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="10dp"
+        android:background="#00BCD4"
+        android:contentDescription="@string/paper"
+        android:layout_gravity="bottom|center"
+        app:srcCompat="@drawable/paper" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

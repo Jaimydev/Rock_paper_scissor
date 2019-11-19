@@ -1,11 +1,11 @@
 package com.kotlinhva.rock_paper_scissor.database
 
 import android.content.Context
-//import com.kotlinhva.rock_paper_scissor.model.BaseGame
+import com.kotlinhva.rock_paper_scissor.model.Game
 
 class GameRepository(context: Context) {
 
-/*
+
     private val gameDao: GameDao
 
     init {
@@ -14,13 +14,13 @@ class GameRepository(context: Context) {
         gameDao = database!!.gameDao()
     }
 
-    suspend fun getAllGames(): List<BaseGame> = gameDao.getAllGames()
+    suspend fun getAllGames(): List<Game> = gameDao.getAllGames()
 
-    suspend fun insertGame(game: BaseGame) = gameDao.insertGame(game)
+    suspend fun insertGame(game: Game) = gameDao.insertGame(game)
 
-    suspend fun deleteGame(game: BaseGame) = gameDao.deleteGame(game)
+    suspend fun deleteGame(game: Game) = gameDao.deleteGame(game)
 
     suspend fun deleteAllGames() = gameDao.deleteAllGames()
-*/
+
 
 }

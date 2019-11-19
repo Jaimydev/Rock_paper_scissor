@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-//import com.kotlinhva.rock_paper_scissor.model.BaseGame
+import androidx.room.TypeConverters
+import com.kotlinhva.rock_paper_scissor.model.Converters
+import com.kotlinhva.rock_paper_scissor.model.Game
 
-/*
-@Database(entities = [BaseGame::class], version = 1, exportSchema = false)
+
+@Database(entities = [Game::class], version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class RockPaperScissorRoomDatabase : RoomDatabase() {
 
     abstract fun gameDao(): GameDao
@@ -34,4 +37,4 @@ abstract class RockPaperScissorRoomDatabase : RoomDatabase() {
         }
     }
 
-}*/
+}
